@@ -7,7 +7,7 @@ const createTeam = (team) => {
   //function to create manager car
   const managerCard = (manager) => {
     return `
-    <div class"col-4 mt-4">
+    <div class="col-4 mt-4">
      <div class="card h-100">
        <div class="card-header bg-primary">
        <h3>${manager.name}</h3>
@@ -26,7 +26,7 @@ const createTeam = (team) => {
   //function to create engineer card
   const engineerCard = (engineer) => {
     return `
-    <div class"col-4 mt-4">
+    <div class="col-4 mt-4">
       <div class="card h-100">
         <div class="card-header bg-primary">
           <h3>${engineer.name}</h3>
@@ -35,7 +35,6 @@ const createTeam = (team) => {
 
         <ul class="list-group">
            <li class="list-group-item">ID: ${engineer.id}</li>
-           <li class="list-group-item">Office Number: ${engineer.officeNumber}</li>
            <li class="list-group-item">Email: <a href="mailto:${engineer.email}">${engineer.email}</a></li>
            <li class="list-group-item">gitHub: <a href="https://github.com/:${engineer.github}" target="_blank" rel="noopener noreferrer">${engineer.github}</a></li>
         </ul>
@@ -47,7 +46,7 @@ const createTeam = (team) => {
   //function to create intern card
   const internCard = (intern) => {
     return `
-  <div class"col-4 mt-4">
+  <div class="col-4 mt-4">
     <div class="card h-100">
       <div class="card-header bg-primary">
         <h3>${intern.name}</h3>
@@ -56,7 +55,6 @@ const createTeam = (team) => {
 
       <ul class="list-group">
          <li class="list-group-item">ID: ${intern.id}</li>
-         <li class="list-group-item">Office Number: ${intern.officeNumber}</li>
          <li class="list-group-item">Email: <a href="mailto:${intern.email}">${intern.email}</a></li>
          <li class="list-group-item">School: ${intern.school}</li>
       </ul>
