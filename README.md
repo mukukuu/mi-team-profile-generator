@@ -1,7 +1,8 @@
 # mi-team-profile-generator
 ![](src/ScreenShot.png)
 
-https://watch.screencastify.com/v/SBnM783mef58N1Z4NNOO
+Links to demonstration video:
+chrome-extension://mmeijimgabbpbgpdklnllpncmdofkcpn/app.html#/files/45570d4d-0606-4a57-yc49-f2385b28962e
 
 ## Table of contents
 
