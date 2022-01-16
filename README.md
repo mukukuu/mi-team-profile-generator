@@ -2,7 +2,8 @@
 ![](src/ScreenShot.png)
 
 Links to demonstration video:
-chrome-extension://mmeijimgabbpbgpdklnllpncmdofkcpn/app.html#/files/45570d4d-0606-4a57-yc49-f2385b28962e
+
+https://watch.screencastify.com/v/SBnM783mef58N1Z4NNOO
 
 ## Table of contents
 
