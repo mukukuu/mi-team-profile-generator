@@ -3,6 +3,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const pagetemplate = require('./src/pagetemplate');
+// const { writeFile, copyFile } = require('./utils/create-site');
 
 //import files
 const Manager = require('./lib/Manager');
@@ -15,7 +16,7 @@ const Intern = require('./lib/Intern');
 const memberArr = [];
 
 //--- basic questions ---//
-const addMember = async () => {
+const questions = async () => {
     const answers = await inquirer
     .prompt([
         {
@@ -44,20 +45,6 @@ const addMember = async () => {
               }
           }
       },
-    //   {
-    //       type:'input',
-    //       name:'officeNumber',
-    //       message:'Please enter office number',
-    //       validate: officeNum  => {
-    //           if (officeNum) {
-    //               return true;
-    //           } else {
-    //               console.log('Please add an office number');
-    //               return false;
-    //           }
-    //       }
-
-    //   },
       {
           type:'input',
           name:'email',
@@ -78,6 +65,8 @@ const addMember = async () => {
           choices: ["Manager", "Engineer", "Intern"],
       },
     ])
+
+
     //---- prompt special role questions based on selected role ----//
     if (answers.role === "Manager") {
         const addManager = await inquirer
@@ -166,23 +155,25 @@ async function questionPrompt() {
     const nextAction = await inquirer
     .prompt([
         {
-        name:'nextAction',
+        name:'Action',
         type:'list',
         message:'Continue to add a member or create new team',
         choices: ['Add member', 'Create team'],
         }
     ])
-    if (questions.nextAction === 'Add member') {
-        return moreQuestions()
+    if (nextAction.Action === 'Add member') {
+        return questionPrompt();
     } 
-    return createTeam()
+    return createTeam();
 }
 
 
 questionPrompt();
-
-function createTeam() {
-    fs.writeFile("./src/pagetemplate", pagetemplate(memberArr), "utf-8");  
-};
-
+function createTeam () {
+    fs.writeFileSync(
+        "./dist/index.html",
+        pagetemplate(memberArr),
+        "utf-8"
+    );
+}
 
