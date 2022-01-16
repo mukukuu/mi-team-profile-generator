@@ -1,5 +1,5 @@
 # mi-team-profile-generator
-![](srcg/ScreenShot.png)
+![](src/ScreenShot.png)
 
 ## Table of contents
 
